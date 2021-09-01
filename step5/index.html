@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>WEB開発実践コース2</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>レスポンシブデザインに対応させよう</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="header">
+    <div>
+      <img src="./img/logo.png">
+    </div>
+    <ul class="menuButtons">
+      <li class="menu">
+        <a href="#profile">Profile</a>
+      </li>
+      <li class="menu">
+        <a href="#works">Works</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="profile" class="canvas">
+    <h2 class="subject">Profile</h2>
+    <div class="profileGroup">
+      <div class="profileGeneral">
+        <div class="profileThumbnail">
+          <img src="./img/thambnail.png">
+        </div>
+        <div class="shareButtonGroup">
+        <a href="" class="shareButton twitter">Twitter</a>
+        <a href="" class="shareButton facebook">Facebook</a>
+        </div>
+      </div>
+      <div class="profileDescription">
+        <p>WEBのお仕事承ります。</p>
+        <p>デザイン/コーディング/WordPress等、WEBサイト作成に関するご要望には可能な限りお応えいたします。</p>
+        <p>SEOを考慮したコーディングに自信があります。</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="works" class="canvas">
+    <h2 class="subject">Works</h2>
+    <div class="worksGroup">
+      <div class="worksItem designBgImg">
+        <div class="worksItemText">
+          <p class="worksItemTextTitle">XX社様コーポレートサイト</p>
+          <p class="worksItemTextDesc">デザイン作成</p>
+        </div>
+      </div>
+      <div class="worksItem designBgImg">
+        <div class="worksItemText">
+          <p class="worksItemTextTitle">XX社キャンペーンサイト</p>
+          <p class="worksItemTextDesc">デザイン作成</p>
+        </div>
+      </div>
+      <div class="worksItem codingBgImg">
+        <div class="worksItemText">
+          <p class="worksItemTextTitle">XX社様サービスサイト</p>
+          <p class="worksItemTextDesc">マークアップ</p>
+        </div>
+      </div>
+      <div class="worksItem designBgImg">
+        <div class="worksItemText">
+          <p class="worksItemTextTitle">XX社様コーポレートサイト</p>
+          <p class="worksItemTextDesc">デザイン作成</p>
+        </div>
+      </div>
+      <div class="worksItem codingBgImg">
+        <div class="worksItemText">
+          <p class="worksItemTextTitle">XXキャンペーンサイト</p>
+          <p class="worksItemTextDesc">マークアップ</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
