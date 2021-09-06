@@ -26,7 +26,7 @@
 .wrapper .container {
     width: 960px;
     margin: auto;
-    padding: 90px
+    padding: 90px;
 }
 
 .wrapper .container .head {
@@ -73,12 +73,15 @@
 
 .wrapper .container .skill {
     overflow: auto;
+    display: flex;
+    flex-direction: row;
 }
 
 .wrapper .container .skill .skill_box {
     width: 300px;
-    float: left;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-right: 30px;
 }
 
@@ -87,6 +90,7 @@
 }
 
 .wrapper .container .skill .skill_box .img_box {
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -97,15 +101,18 @@
 
 .wrapper .container .work {
     overflow: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper .container .work .work_box {
-    width: 465px;
-    float: left;
-    margin-right: 30px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
 }
 
-.wrapper .container .work .work_box.last {
+.wrapper .container .work .work_box:last-child {
     margin-right: 0;
 }
 
@@ -125,12 +132,47 @@
 
 .wrapper .container .work .work_box .text_box {
     background: #293F65;
-    padding: 15px;
+    padding: 20px;
     color: #ffffff;
 }
 
-.wrapper .container .contact {
+.wrapper .container .work .work_box .text_box.title {
+    padding: 20px;
+    font-size: 20px;
     text-align: center;
+    position: relative;
+}
+
+.wrapper .container .work .work_box .text_box.title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    display: block;
+    border-bottom: 2px solid white;
+}
+
+.wrapper .container .menu {
+    width: 1020px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.wrapper .container .menu_button {
+    width: 250px;
+    height: 60px;
+    background: #293F65;
+    font-size: 22px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 2px;
+    border: none;
 }
 
 .wrapper .footer {
@@ -139,124 +181,117 @@
 
 @media screen and (max-width:768px) {   
     .header .logo {
-        width: 20%;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .wrapper.bg_blue {
+        padding-top: 50px;
     }
 
     .wrapper.bg_img {
-        height: 550px;
+        height: 400px;
         width: 100%;
     }
 
     .wrapper .container {
         width: 100%;
-        padding: 0
-    }
-
-    .wrapper .container .head {
-        text-align: center;
-        padding: 40px 0;
-    }
-
-    .wrapper .container .head .logo {
-        height: 185px;
-        margin-bottom: 15px;
+        padding: 0;
     }
 
     .wrapper .container .head .frase {
-        color: #FFFFFF;
-        font-weight: normal;
-    }
-
-    .wrapper .container .head .skills {
-        background-color: #FFFFFF;
-        color: #293F65;
-        display: inline;
+        font-size: 20px;
     }
 
     .wrapper .container .head_line {
-        font-size: 30px;
-        font-weight: normal;
-        width: 25%;
-        margin: auto;
-        text-align: center;
-        border-top: solid 1px;
-        border-bottom: solid 1px;
-        margin-bottom: 50px;
+        width: 30%;
+        margin-top: 30px;
     }
 
     .wrapper .container .about .img_box {
         text-align: center;
+        margin: 0 10% 50px 10%;
         margin-bottom: 50px;
+    }
+
+    .wrapper .container .about .img_box .about_img {
+        width: 80%;
     }
 
     .wrapper .container .about .text_box {
         font-size: 18px;
         text-align: center;
+        margin: 0 10% 70px 10%;
     }
 
     .wrapper .container .skill {
         text-align: center;
+        flex-direction: column;
     }
 
     .wrapper .container .skill .skill_box {
-        width: 50%;
-        float: left;
+        width: 100%;
         text-align: center;
-        margin-right: 30px;
+        display: inline-block;
+        margin-bottom: 50px;
     }
 
-    .wrapper .container .skill .skill_box.last {
-        margin-right: 0;
-    }
-
-    .wrapper .container .skill .skill_box .img_box {
-        margin-bottom: 15px;
+    .wrapper .container .skill .skill_box .img_box .skill_img {
+        width: 50%;
+        text-align: center;
+        display: inline-block;
     }
 
     .wrapper .container .skill .skill_box .text_box {
-        font-size: 14px;
-        text-align: center;
+        margin: 0 10% 0 10%;
     }
 
     .wrapper .container .work {
-        overflow: auto;
+        flex-direction: column;
     }
 
     .wrapper .container .work .work_box {
-        width: 90%;
-        float: left;
-        margin-right: auto;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+        justify-content: center;
+        align-items: center;
     }
 
-    .wrapper .container .work .work_box.last {
+    .wrapper .container .work .work_box:last-child {
         margin-right: 0;
+        margin-bottom: 60px;
     }
 
     .wrapper .container .work .work_box .img_box {
-        height: 250px;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .wrapper .container .work .work_box .img_box.work_1 {
-        background-image: url(../img/work_img_1.png);
-    }
-
-    .wrapper .container .work .work_box .img_box.work_2 {
-        background-image: url(../img/work_img_2.png);
+        width: 90%;
     }
 
     .wrapper .container .work .work_box .text_box {
-        background: #293F65;
-        padding: 15px;
-        color: #ffffff;
+        width: 80%;
+        padding: 5%;
+        font-size: 14px;
     }
 
-    .wrapper .container .contact {
-        text-align: center;
+    .wrapper .container .work .work_box .text_box.title {
+        width: 80%;
+        padding: 5%;
+        margin: 0 5% 0 5%;
+        font-size: 20px;
+    }
+
+    .wrapper .container .menu {
+        width: 100%;
+    }
+
+    .wrapper .container .menu_button {
+        width: 100%;
     }
 
     .wrapper .footer {
-        text-align: center;
+        font-size: 12px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }
