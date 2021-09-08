@@ -79,18 +79,19 @@
   align-items: center;
 }
 
-.designBgImg {
-  background-image: url('https://fakeimg.pl/250x150/81F7D8');
-  background-position: center center;
+/* .designBgImg {
+  width: 250px;
+  height: 170px;
 }
 
 .codingBgImg {
-  background-image: url('https://fakeimg.pl/250x150/F781F3');
-  background-position: center center;
-}
+  width: 250px;
+  height: 170px;
+} */
 
 .worksItemText {
   padding: 15px;
+  margin: -142px 0 0 30px;
   text-align: center;
   display: block;
   width: 160px;
